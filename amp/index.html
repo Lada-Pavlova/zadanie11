@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html amp lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <link rel="canonical" href="index.html">
+  <style amp-custom>
+    @font-face {
+      font-family: 'OpenSans';
+      font-style: normal;
+      src: url('../fonts/OpenSans-Light.ttf');
+    }
+
+    @font-face {
+      font-family: 'OpenSans_b';
+      font-style: normal;
+      src: url('../fonts/OpenSans-Bold.ttf');
+    }
+
+    @font-face {
+      font-family: 'OpenSans';
+      font-style: normal;
+      font-weight: bold;
+      src: url('../fonts/OpenSans-SemiBold.ttf');
+    }
+
+    @font-face {
+      font-family: 'Raleway_t';
+      font-style: normal;
+      src: url('../fonts/Raleway-Thin.ttf');
+    }
+
+    @font-face {
+      font-family: 'Raleway_l';
+      font-style: normal;
+      src: url('../fonts/Raleway-Light.ttf');
+    }
+
+    @font-face {
+      font-family: 'Raleway_b';
+      font-style: normal;
+      src: url('../fonts/Raleway-Bold.ttf');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'OpenSans';
+      color: rgb(134, 135, 139);
+      font-size: 14px;
+    }
+
+    h2, h3{
+      font-family: 'Raleway_t';
+      color: black;
+      margin: 20px 0;
+    }
+
+    h4, p {
+      margin: 20px 0;
+    }
+
+    h2 {
+      font-size: 36px;
+    }
+
+    h1 {
+      font-size: 0;
+    }
+
+    .openSans_b {
+      font-family: 'OpenSans_b';
+      color: black;
+      font-size: 20px;
+    }
+
+    .font_light {
+      font-family: 'Raleway_l';
+      font-size: 16px;
+    }
+
+    .raleway_b {
+      font-family: 'Raleway_b';
+      font-size: 94px;
+      color: white;
+    }
+
+    .raleway_b>span {
+      font-size: 35px;
+    }
+
+    .color_white {
+      color: white;
+    }
+
+    .main, .cont_header, .cont_brandBar, .features_1, .features_2, .features_3,
+    .cont_process, .cont_pricing, .cont_testimonials, .cont_custom, .cont_contacts, .cont_footer {
+      width: 80%;
+      margin: auto;
+    }
+
+    header {
+      background: url('../img/bgaxit.png') no-repeat center bottom fixed;
+      background-size: cover;
+      min-height: 700px;
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+
+    .color_white {
+      color: white;
+    }
+
+    .br_div {
+      width: 62px;
+      height: 2px;
+      margin: auto;
+      background-color: rgb(255, 139, 56);
+    }
+
+    .left_div {
+      margin-left: 0;
+    }
+
+    .color_div {
+      background-color: white;
+    }
+
+    .main {
+      display: flex;
+      width: 80%;
+      margin: auto;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav_main {
+      flex-basis: 40%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .a_main {
+      text-decoration: none;
+      font-family: 'OpenSans';
+      font-size: 14px;
+      color: white;
+      line-height: 60px;
+      border-bottom: 5px solid black;
+    }
+
+    nav {
+      background-color: black;
+    }
+
+    .cont_header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cont_header_1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-basis: 50%;
+    }
+
+    .cont_header_1>p {
+      margin: 30px auto;
+    }
+
+    .cont_header_2 {
+      display: flex;
+      align-content: center;
+      width: 350px;
+    }
+
+    .form_header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    .form_header_p, .form_header_input {
+      width: 100%;
+    }
+
+    .form_header_p {
+      background-color: rgb(245, 245, 245);
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .form_header_p>span {
+      color: rgb(255, 139, 56);
+    }
+
+    .form_header_input {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form_header_button {
+      background-color: rgb(255, 139, 56);
+      color: white;
+      font-size: 15px;
+      border: none;
+      height: 50px;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .form_header_input>input {
+      height: 30px;
+      width: 80%;
+      margin: 26px auto;
+      font-family: 'OpenSans';
+      font-size: 14px;
+      border: none;
+      border-bottom: 1px solid rgb(214, 214, 214);
+    }
+
+    .button_image {
+      width: 130px;
+      background-color: rgba(255, 255, 255, 0);
+      color: white;
+      border: 2px groove white;
+      transition: 0.5s;
+    }
+
+    button {
+      height: 35px;
+      font-family: 'OpenSans';
+      font-weight: bold;
+    }
+
+    .cont_brandBar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px auto;
+    }
+
+    .div_cont_brandBar {
+      flex-basis: 40%;
+    }
+
+    .div_cont_brandBar>h3,.div_cont_brandBar>p {
+      margin: 5px auto;
+    }
+
+    .fontawesome {
+      font-size: 40px;
+      color: rgb(204, 204, 204);
+    }
+
+    .features {
+      border-top: 3px groove rgb(255, 255, 255);
+    }
+
+    .img_border_shadow {
+      box-shadow: 0 0 30px rgb(148, 148, 148);
+    }
+
+    .div_features {
+      height: 550px;
+      display: flex;
+      align-items: center;
+    }
+
+    .feature_gray, .pricing {
+      background-color: rgb(245, 245, 245);
+    }
+
+    .features_1, .features_2, .features_3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .div_feature_1 {
+      flex-basis: 100px;
+    }
+
+    .div_feature_1>button {
+      width: 100px;
+      height: 100px;
+      border: 1px solid rgb(199, 199, 199);
+      background-color: rgb(51, 51, 51);
+      color: white;
+    }
+
+    .div_feature_1>.select {
+      background-color: rgb(255, 139, 56);
+      border-radius: 5px 5px 0 0;
+    }
+
+    .div_feature_1>.select_2 {
+      border-radius: 0 0 5px 5px;
+    }
+
+    .div_feature_2 {
+      flex-basis: 45%;
+    }
+
+    .div_feature_2>h4 {
+      margin: 0;
+    }
+
+    .div_feature_2_p {
+      margin: 50px auto;
+    }
+
+    .div_feature_2>button {
+      width: 120px;
+      height: 40px;
+      background-color: rgb(255, 139, 56);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-family: 'OpenSans';
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .cont_feature_2 {
+      flex-basis: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .titles_feature_2 {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px auto;
+    }
+
+    .div_title_1 {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .title_font>i {
+      font-size: 40px;
+      color: rgb(255, 139, 56);
+    }
+
+    .div_title_2 {
+      flex-basis: 85%;
+    }
+
+    .div_title_2>span {
+      font-family: 'OpenSans';
+      font-weight: bold;
+      color: black;
+    }
+
+    .div_title_2>p {
+      margin-top: 5px;
+    }
+
+    .features_3 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cont_features_3 {
+      flex-basis: 45%;
+    }
+
+    .header_block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header_block * {
+      margin: 12px auto;
+    }
+
+    .cont_process {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin: 40px auto;
+    }
+
+    .div_process {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0;
+    }
+
+    .div_arlicle_process {
+      flex-basis: 30%;
+    }
+
+    .cont_pricing {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 0 100px;
+    }
+
+    .blocks_pricing {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .block_pricing {
+      width: 320px;
+      margin-top: 50px;
+    }
+
+    .head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .italic_pricing {
+      font-style: italic;
+      padding: 10px 0;
+    }
+
+    .pricing_div {
+      width: 100%;
+      height: 5px;
+    }
+
+    .pricing_div_popular {
+      height: auto;
+      font-size: 14px;
+      color: white;
+      padding: 10px 0;
+    }
+
+    .color_black {
+      background-color: rgb(51, 51, 51);
+      border-top: 1px solid white;
+    }
+
+    .color_black>p {
+      margin: 0;
+    }
+
+    .block_pricing>.head {
+      height: 60px;
+    }
+
+    .functions_pricing {
+      padding-left: 0;
+      list-style: none;
+      margin: 0;
+    }
+
+    .functions_pricing>li {
+      background-color: white;
+      padding: 10px 0;
+      border: 1px solid rgb(245, 245, 245);
+    }
+
+    .cont_testimonials {
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .list_customs {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    .dialog_custom {
+      background-color: rgb(245, 245, 245);
+      width: 250px;
+      padding: 20px 10px;
+      text-align: left;
+      font-style: italic;
+    }
+
+    .div_user {
+      display: flex;
+      margin: 20px auto;
+    }
+
+    .div_user_info {
+      padding-left: 20px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .user_info {
+      margin: 0;
+    }
+
+    .custom {
+      background: url('../img/bg-footer.png') no-repeat center;
+    }
+
+    .cont_custom {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      padding: 50px 0;
+    }
+
+    .cont_custom * {
+      color: white;
+      margin: 15px auto;
+    }
+
+    .cont_contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 70px 0;
+    }
+
+    .form_contacts {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 50px 0;
+    }
+
+    .form_contacts * {
+      font-family: 'OpenSans';
+      font-size: 14px;
+      border: none;
+    }
+
+    .div_contact_1 {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+    }
+
+    .div_contact_2 {
+      flex-basis: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 5px 0;
+    }
+
+    .div_contact_1 * {
+      border-bottom: 1px solid rgb(214, 214, 214);
+      height: 40px;
+      margin: 10px 0 5px;
+    }
+
+    .contact_1 {
+      margin: 0;
+    }
+
+    .div_contact_2 * {
+      border-bottom: 1px solid rgb(214, 214, 214);
+      height: 135px;
+    }
+
+    .cont_contacts>button {
+      width: 140px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(255, 139, 56);
+      color: white;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      font-family: 'OpenSans';
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .cont_footer {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      align-items: center;
+      padding: 20px 0 10px;
+    }
+
+    .cont_footer>p {
+      font-size: 12px;
+      margin: 10px;
+    }
+
+    .div_fontawesome_footer {
+      width: 320px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .fontawesome_footer {
+      font-size: 24px;
+      color: white;
+    }
+
+    .a_main:hover {
+      border-bottom: 5px solid rgb(255, 139, 56);
+      box-sizing: border-box;
+    }
+
+    .button_image:hover {
+      cursor: pointer;
+      background-color: rgb(255, 139, 56);
+      border: none;
+    }
+
+    .form_header_button:hover {
+      cursor: pointer;
+      background-color: rgb(255, 106, 0);
+    }
+
+    .div_feature_1>button:hover {
+      background-color: rgb(255, 139, 56);
+    }
+  </style>
+  <title>AXIT</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="main">
+        <div>
+          <a href="index.html">
+            <amp-img src="img/logo-axit.png" alt="" width="70" height="70"></amp-img>
+          </a>
+        </div>
+        <div class="nav_main">
+          <a class="a_main" href="index.html">Features</a>
+          <a class="a_main" href="index.html">About</a>
+          <a class="a_main" href="index.html">Pricing</a>
+          <a class="a_main" href="index.html">Reviews</a>
+          <a class="a_main" href="index.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <div class="cont_header">
+      <section class="cont_header_1">
+        <h1>AXIT <amp-img src="img/logo-axit.png" alt="" width="150" height="150"></amp-img></h1>
+        <h2 class="color_white">MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES</h2>
+        <div class="br_div color_div left_div"></div>
+        <p class="font_light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+          Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+        <button class="button_image">Download</button>
+      </section>
+      <section class="cont_header_2">
+        <form class="form_header" action-xhr="index.html" method="post">
+          <div class="form_header_p openSans_b">Try Your <span>FREE</span> Trial Today</div>
+          <section class="form_header_input">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+          </section>
+          <button class="form_header_button">Get Started</button>
+        </form>
+      </section>
+    </div>
+  </header>
+
+  <!-- Другие разделы вашего сайта -->
+  <section class="branBar">
+    <div class="cont_brandBar">
+      <div class="div_cont_brandBar">
+        <h3 class="openSans_b">Social Media</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+      </div>
+      <a class="fontawesome" href="index.html"><i class="fa-brands fa-facebook-f"></i></a>
+      <a class="fontawesome" href="index.html"><i class="fa-brands fa-twitter"></i></a>
+      <a class="fontawesome" href="index.html"><i class="fa-brands fa-google-plus-g"></i></a>
+      <a class="fontawesome" href="index.html"><i class="fa-brands fa-pinterest"></i></a>
+      <a class="fontawesome" href="index.html"><i class="fa-brands fa-instagram"></i></a>
+      <a class="fontawesome" href="index.html"><i class="fa-brands fa-stumbleupon"></i></a>
+      <a class="fontawesome" href="index.html"><i class="fa-solid fa-wifi"></i></a>
+    </div>
+  </section>
+
+  <article class="features">
+    <div class="div_features feature_gray">
+      <section class="features_1">
+        <div class="div_feature_1 openSans_b">
+          <button class="select">TAB 1</button>
+          <button>TAB 2</button>
+          <button class="select_2">TAB 3</button>
+        </div>
+        <div class="div_feature_2">
+          <h4 class="openSans_b">Tabs with soft transitioning effect.</h4>
+          <div class="div_feature_2_p">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+          </div>
+          <button>Download</button>
+        </div>
+        <div class="div_feature_3">
+          <amp-img src="img/image_right_city.png" alt="" width="310" height="310"></amp-img>
+        </div>
+      </section>
+    </div>
+    <div class="div_features">
+      <section class="features_2">
+        <div class="img_border_shadow">
+          <amp-img src="img/image_left_sub_list.png" alt="" width="400" height="400"></amp-img>
+        </div>
+        <div class="cont_feature_2">
+          <h4 class="openSans_b">Sub list section</h4>
+          <div class="br_div left_div"></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+          <div class="titles_feature_margin">
+            <div class="titles_feature_2">
+              <div class="div_title_1">
+                <a class="title_font" href="index.html"><i class="fa-solid fa-cloud-arrow-up"></i></a>
+              </div>
+              <div class="div_title_2">
+                <span>Title</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+              </div>
+            </div>
+            <div class="titles_feature_2">
+              <div class="div_title_1">
+                <a class="title_font" href="index.html"><i class="fa-solid fa-cloud-arrow-down"></i></a>
+              </div>
+              <div class="div_title_2">
+                <span>Title</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="div_features feature_gray">
+      <section class="features_3">
+        <div class="cont_features_3">
+          <div>
+            <h4 class="openSans_b">Standard Picture Section</h4>
+            <div class="br_div left_div"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+          </div>
+        </div>
+        <div class="img_border_shadow">
+          <amp-img src="img/image_right_standard.png" alt="" width="400" height="400"></amp-img>
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <article class="process">
+    <div class="cont_process">
+      <div class="header_block">
+        <h2>WHY THIS IS AWESOME</h2>
+        <div class="br_div"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="div_process">
+        <div class="div_arlicle_process">
+          <a href="index.html"></a>
+          <span class="openSans_b">Thoughtful Design</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+        </div>
+        <div class="div_arlicle_process">
+          <a href="index.html"></a>
+          <span class="openSans_b">Well Crafted</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+        </div>
+        <div class="div_arlicle_process">
+          <a href="index.html"></a>
+          <span class="openSans_b">Easy to Customize</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="pricing">
+    <div class="cont_pricing">
+      <div class="header_block">
+        <h2>PRICING OPTIONS</h2>
+        <div class="br_div"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <section class="blocks_pricing">
+        <div class="block_pricing">
+          <div class="color_black head openSans_b">Basic</div>
+          <div class="color_black">
+            <p class="raleway_b"><span>$</span>0</p>
+            <p class="italic_pricing">Free for Life</p>
+          </div>
+          <div class="br_div pricing_div"></div>
+          <ul class="functions_pricing">
+            <li>1 GB OF SPACE</li>
+            <li>10 GB OF BANDWIDTH</li>
+            <li>3 WEBSITES</li>
+            <li>BASIC CUSTOMIZATION</li>
+            <li>WORDPRESS INTEGRATION</li>
+            <li>EMAIL SUPPORT</li>
+          </ul>
+        </div>
+        <div class="block_pricing popular">
+          <div class="color_black head openSans_b">Professional</div>
+          <div class="color_black">
+            <p class="raleway_b"><span>$</span>19</p>
+            <p class="italic_pricing">Monthly Payment</p>
+          </div>
+          <div class="br_div pricing_div pricing_div_popular openSans_b">OUR MOST POPULAR</div>
+          <ul class="functions_pricing">
+            <li>5 GB OF SPACE</li>
+            <li>50 GB OF BANDWIDTH</li>
+            <li>12 WEBSITES</li>
+            <li>ADVANCED CUSTOMIZATION</li>
+            <li>WORDPRESS INTEGRATION</li>
+            <li>EMAIL SUPPORT</li>
+          </ul>
+        </div>
+        <div class="block_pricing">
+          <div class="color_black head openSans_b">Enterprise</div>
+          <div class="color_black">
+            <p class="raleway_b"><span>$</span>70</p>
+            <p class="italic_pricing">Monthly Payment</p>
+          </div>
+          <div class="br_div pricing_div"></div>
+          <ul class="functions_pricing">
+            <li>UNLIMITED SPACE</li>
+            <li>UNLIMITED BANDWIDTH</li>
+            <li>100 WEBSITES</li>
+            <li>ADVANCED CUSTOMIZATION</li>
+            <li>WORDPRESS INTEGRATION</li>
+            <li>24/7 CUSTOMER SUPPORT</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <article class="testimonials">
+    <div class="cont_testimonials">
+      <div class="header_block">
+        <h2>WHAT OUR CUSTOMERS ARE SAYING</h2>
+        <div class="br_div"></div>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="list_customs">
+        <div>
+          <div class="dialog_custom">
+            Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Doloribus
+            accusamus expedita repellat similique
+            odio aspernatur ex, architecto eaque
+            quo suscipit.
+          </div>
+          <div class="div_user">
+            <div>
+              <amp-img src="img/avatar_customer.png" alt="" width="70" height="70"></amp-img>
+            </div>
+            <div class="div_user_info">
+              <span class="openSans_b">Jeremy H.</span>
+              <p class="user_info">Manager</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="dialog_custom">
+            Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Doloribus
+            accusamus expedita repellat similique
+            odio aspernatur ex, architecto eaque
+            quo suscipit.
+          </div>
+          <div class="div_user">
+            <div>
+              <amp-img src="img/avatar_customer.png" alt="" width="70px" height="70"></amp-img>
+            </div>
+            <div class="div_user_info">
+              <span class=" openSans_b">John S.</span>
+              <p class="user_info">Freelancer</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="dialog_custom">
+            Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Doloribus
+            accusamus expedita repellat similique
+            odio aspernatur ex, architecto eaque
+            quo suscipit.
+          </div>
+          <div class="div_user">
+            <div>
+              <amp-img src="img/avatar_customer.png" alt="" width="70px" height="70"></amp-img>
+            </div>
+            <div class="div_user_info">
+              <span class=" openSans_b">Susan W.</span>
+              <p class="user_info">Photographer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="custom">
+    <div class="cont_custom">
+      <h2 class="color_white">STYLISH AXURE DESIGN</h2>
+      <div class="br_div color_div"></div>
+      <p class="font_light">Use the sections you need, remove the ones you don't. Create gorgeous prototypes faster than
+        ever!</p>
+      <button class="button_image">Download</button>
+    </div>
+  </article>
+  <article class="contacts">
+    <div class="cont_contacts">
+      <div class="header_block">
+        <h2>CONTACT US</h2>
+        <div class="br_div"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <form action="index.html" class="form_contacts">
+        <div class="div_contact_1">
+          <input class="contact_1" type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <input type="text" placeholder="Subject">
+        </div>
+        <div class="div_contact_2">
+          <textarea cols="10" rows="5" placeholder="Message"></textarea>
+        </div>
+      </form>
+      <button>Send Message</button>
+    </div>
+  </article>
+  <footer>
+    <div class="cont_footer">
+      <div class="div_fontawesome_footer">
+        <a class="fontawesome_footer" href="index.html"><i class="fa-brands fa-facebook-f"></i></a>
+        <a class="fontawesome_footer" href="index.html"><i class="fa-brands fa-twitter"></i></a>
+        <a class="fontawesome_footer" href="index.html"><i class="fa-brands fa-google-plus-g"></i></a>
+        <a class="fontawesome_footer" href="index.html"><i class="fa-brands fa-pinterest"></i></a>
+        <a class="fontawesome_footer" href="index.html"><i class="fa-brands fa-instagram"></i></a>
+        <a class="fontawesome_footer" href="index.html"><i class="fa-brands fa-stumbleupon"></i></a>
+        <a class="fontawesome_footer" href="index.html"><i class="fa-solid fa-wifi"></i></a>
+      </div>
+      <p>© 2015 Axure Themes</p>
+    </div>
+  </footer>
+</body>
+<script src="https://kit.fontawesome.com/2e058009cd.js" crossorigin="anonymous"></script>
+
+</html>
